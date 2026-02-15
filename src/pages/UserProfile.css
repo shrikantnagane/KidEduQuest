@@ -1,0 +1,229 @@
+
+.profile-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.level-badge {
+    color: var(--text-light);
+    margin: 5px 0 10px;
+    font-weight: 500;
+}
+
+.profile-stats-row {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-pill {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logout-btn {
+    margin-left: auto;
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+}
+
+/* Charts */
+.chart-container {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 30px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-fill {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    transition: height 0.5s ease;
+}
+
+.bar-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.skills-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-row {
+    font-weight: 600;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.skill-bar-bg {
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+/* History */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.history-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.history-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.history-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logout-btn {
+        margin: 0 auto;
+    }
+}

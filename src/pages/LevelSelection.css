@@ -1,0 +1,71 @@
+.levels-container {
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.level-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.level-card {
+    flex: 1;
+    max-width: 300px;
+    padding: 60px 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.level-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+}
+
+.level-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.level-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.level-easy {
+    background: var(--success);
+}
+
+.level-medium {
+    background: var(--accent);
+}
+
+.level-medium .level-name {
+    color: var(--text);
+}
+
+.level-hard {
+    background: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .level-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
