@@ -38,7 +38,7 @@ function App() {
           </Routes>
         </main>
         <footer style={{ padding: '40px', textAlign: 'center', color: 'var(--text-light)' }}>
-          <p>&copy; 2026 KidEduQuest. All rights reserved. 🚀</p>
+          <p>&copy; 2026 KidEduQuest. All rights reserved. 🚀 (v1.1)</p>
         </footer>
       </Router>
     </AuthProvider>
