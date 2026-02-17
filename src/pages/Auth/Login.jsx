@@ -7,12 +7,12 @@ const Login = () => {
     const navigate = useNavigate();
     const { login } = useAuth();
 
-    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const success = login(name, password);
+        const success = login(email, password);
         if (success) {
             navigate('/dashboard');
         }
@@ -24,14 +24,14 @@ const Login = () => {
                 <h2 className="auth-title">Welcome Back! 😊</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label>Your Name</label>
+                        <label>Email Address</label>
                         <input
-                            type="text"
+                            type="email"
                             className="form-input"
-                            placeholder="e.g. Alex"
+                            placeholder="name@example.com"
                             required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
