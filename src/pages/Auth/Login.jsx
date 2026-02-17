@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import './Auth.css';
 
 const Login = () => {
+    // Verified: Check for Email Input
     const navigate = useNavigate();
     const { login } = useAuth();
 
