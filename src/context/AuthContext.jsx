@@ -17,9 +17,11 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
     }, []);
 
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
     const login = async (email, password) => {
         try {
-            const res = await fetch('http://localhost:5000/api/auth/login', {
+            const res = await fetch(`${API_URL}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -44,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
     const signup = async (name, email, phone, password) => {
         try {
-            const res = await fetch('http://localhost:5000/api/auth/signup', {
+            const res = await fetch(`${API_URL}/auth/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, phone, password })
@@ -86,7 +88,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('kidEduUser', JSON.stringify(updatedUser)); // Keep local sync
 
         try {
-            await fetch('http://localhost:5000/api/user/progress', {
+            await fetch(`${API_URL}/user/progress`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
